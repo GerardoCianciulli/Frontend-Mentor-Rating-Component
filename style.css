@@ -1,0 +1,131 @@
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --grey: hsl(216, 12%, 54%, 25%);
+    --blue: hsl(213, 19%, 18%);
+    --dark-blue: hsl(216, 12%, 8%);
+
+    --gradient-card-component: linear-gradient(
+        180deg, var(--blue), var(--dark-blue) 125%
+    );
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Overpass';
+    font-size: .8125rem;
+    font-weight: 400;
+    background-color: var(--dark-blue);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    text-align: left;
+    color: var(--light-grey);
+}
+
+#rating-component {
+    border-radius: 2rem;
+    background: var(--gradient-card-component);
+    width: 20.5rem;
+    height: 22.5rem;
+    padding: 1.875rem;
+}
+
+h1, h2 {
+    line-height: 1.25rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+#score-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.round-label {
+    width: 2.625rem;
+    aspect-ratio: 1 / 1;
+    background-color: var(--grey);
+    border-radius: 5rem;
+    display: grid;
+    place-content: center;
+}
+
+#star-svg {
+    margin-right: auto;
+}
+
+#score {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#score-values {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.875rem;
+}
+
+#score-values label {
+    align-items: center;
+    display: flex;
+}
+
+#score-values label input {
+    opacity: 0;
+    width: 100%;
+}
+
+#score-values label span {
+    position: relative;
+    left: -50%;
+    transform: translateX(50%);
+}
+.submit {
+    width: 100%;
+    height: 2.8125rem;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    text-transform: uppercase;
+}
+
+#thank-you-card {
+    display: none;
+}
+
+@media (min-width: 600px) {
+    body {
+        font-size: .9375rem;
+    }
+
+    #rating-component {
+        width: 25.75rem;
+        height: 26rem;
+    } 
+    
+    .round-label {
+        width: 3.25rem;
+    }
+}
