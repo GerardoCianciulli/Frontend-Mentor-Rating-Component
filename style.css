@@ -42,23 +42,26 @@ body {
     background: var(--gradient-card-component);
     width: 20.5rem;
     height: 22.5rem;
-    padding: 1.875rem;
+    padding: 2.1875rem 1.5625rem;
 }
 
-h1, h2 {
-    line-height: 1.25rem;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--white);
-}
-
-#score-card {
-    display: flex;
+#score-card, #thank-you-card {    
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: 100%;
+}
+
+#score-card {
+    display: flex;
+}
+
+h1, h2 {
+    line-height: 1.375rem;
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--white);
 }
 
 .round-label {
@@ -101,18 +104,48 @@ h1, h2 {
     left: -50%;
     transform: translateX(50%);
 }
+
+.submit, .round-label:hover, .round-label:focus {
+    cursor: pointer;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.round-label span, .round-label input {
+    pointer-events: none;
+}
+
+.round-label.selected {
+    background-color: var(--light-grey);
+    color: var(--white);
+    pointer-events: none;
+}
+
 .submit {
     width: 100%;
     height: 2.8125rem;
-    background-color: var(--orange);
-    color: var(--white);
     border: none;
     border-radius: 2rem;
     text-transform: uppercase;
 }
 
+.submit:hover, .submit:focus {
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--orange);
+}
+
 #thank-you-card {
     display: none;
+    text-align: center;
+}
+
+#view-score {
+    width: 194px;
+    background: var(--grey);
+    border-radius: 50px;
+    color: var(--orange);
+    line-height: 32px;
 }
 
 @media (min-width: 600px) {
@@ -123,9 +156,16 @@ h1, h2 {
     #rating-component {
         width: 25.75rem;
         height: 26rem;
+        padding: 2.8125rem 2.25rem;
     } 
     
     .round-label {
         width: 3.25rem;
+    }
+
+    h1, h2 {
+        line-height: 1.625rem;
+        font-size: 1.625rem;
+        margin-bottom: 1.1875rem;
     }
 }
