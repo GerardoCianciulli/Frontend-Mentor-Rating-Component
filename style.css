@@ -27,7 +27,8 @@ img, svg {
 
 body {
     font-family: 'Overpass';
-    font-size: .8125rem;
+    line-height: 1.3125rem;
+    font-size: .875rem;
     font-weight: 400;
     background-color: var(--dark-blue);
     display: grid;
@@ -38,11 +39,11 @@ body {
 }
 
 #rating-component {
-    border-radius: 2rem;
     background: var(--gradient-card-component);
     width: 20.5rem;
     height: 22.5rem;
-    padding: 2.1875rem 1.5625rem;
+    padding: 1.875rem 1.5625rem;
+    border-radius: 1rem;
 }
 
 #score-card, #thank-you-card {    
@@ -57,8 +58,8 @@ body {
 }
 
 h1, h2 {
-    line-height: 1.375rem;
-    font-size: 1.375rem;
+    font-size: 1.4688rem;
+    line-height: 1.4688rem;
     margin-bottom: 1rem;
     font-weight: 700;
     color: var(--white);
@@ -69,8 +70,9 @@ h1, h2 {
     aspect-ratio: 1 / 1;
     background-color: var(--grey);
     border-radius: 5rem;
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #star-svg {
@@ -89,17 +91,12 @@ h1, h2 {
     margin-bottom: 1.875rem;
 }
 
-#score-values label {
-    align-items: center;
-    display: flex;
-}
-
-#score-values label input {
+#score-values input {
     opacity: 0;
     width: 100%;
 }
 
-#score-values label span {
+#score-values span {
     position: relative;
     left: -50%;
     transform: translateX(50%);
@@ -141,22 +138,24 @@ h1, h2 {
 }
 
 #view-score {
-    width: 194px;
+    width: 12.125rem;
     background: var(--grey);
     border-radius: 50px;
     color: var(--orange);
-    line-height: 32px;
+    line-height: 2rem;
 }
 
 @media (min-width: 600px) {
     body {
         font-size: .9375rem;
+        line-height: 1.5rem;;
     }
 
     #rating-component {
         width: 25.75rem;
         height: 26rem;
-        padding: 2.8125rem 2.25rem;
+        padding: 2rem 2.25rem;
+        border-radius: 2rem;
     } 
     
     .round-label {
@@ -164,8 +163,7 @@ h1, h2 {
     }
 
     h1, h2 {
-        line-height: 1.625rem;
-        font-size: 1.625rem;
-        margin-bottom: 1.1875rem;
+        line-height: 1.75rem;
+        font-size: 1.75rem;
     }
 }
