@@ -77,6 +77,7 @@ h1, h2 {
 
 #star-svg {
     margin-right: auto;
+    pointer-events: none;
 }
 
 #score {
@@ -102,7 +103,7 @@ h1, h2 {
     transform: translateX(50%);
 }
 
-.submit, .round-label:hover, .round-label:focus {
+.submit, .round-label:hover, .round-label:focus-within {
     cursor: pointer;
     background-color: var(--orange);
     color: var(--white);
@@ -126,7 +127,7 @@ h1, h2 {
     text-transform: uppercase;
 }
 
-.submit:hover, .submit:focus {
+.submit:hover {
     cursor: pointer;
     background-color: var(--white);
     color: var(--orange);
