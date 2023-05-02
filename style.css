@@ -146,6 +146,20 @@ h1, h2 {
     line-height: 2rem;
 }
 
+.attribution { 
+    font-size: .6875rem;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
 @media (min-width: 600px) {
     body {
         font-size: .9375rem;
